@@ -1,4 +1,4 @@
-* [ ] Restaurant Project Frontend
+# Restaurant Project Frontend
 
 ## Getting Started
 
