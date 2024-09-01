@@ -26,7 +26,13 @@ function DashBoard() {
 
     console.log(query.toString());
 
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/restaurants?${query.toString()}`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/restaurants?${query.toString()}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('rest_token')}`
+      }
+    })
       .then(response => response.json())
       .then(data => {
         console.log(data);
